@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Marcellus&family=Raleway:wght@500;600;700&display=swap');
 
 :root {
-    --clr-1: hsl(30, 52%, 87%);
-    --clr-2: hsl(39, 77%, 83%);
+    --clr-1: hsl(30, 52%, 95%);
+    --clr-2: hsl(39, 77%, 90%);
     --clr-3: hsl(21, 16%, 33%);
-    --clr-4: hsl(25, 34%, 33%);
-    --clr-5: hsl(26, 100%, 7%);
+    --clr-4: hsl(25, 34%, 23%);
+    --clr-5: hsl(26, 100%, 5%);
     --ff-head: 'Raleway', sans-serif;
     --ff-sub: 'Marcellus', sans-serif;
     --ff-body: 'Della Respira', sans-serif;
@@ -30,14 +30,19 @@ h2 {
     color: var(--clr-1);
     font-family: var(--ff-head);
     font-weight: 700;
-    font-size: 2.8em;
+    font-size: 2.6em;
     text-shadow: 2vw 2vw 1vw rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    font-family: var(--ff-sub);
+    margin: 3vw 0vw;
 }
 
 a {
     text-decoration: none;
-    font-family: var(--ff-sub);
-    font-weight: 400;
+    font-family: var(--ff-head);
+    font-weight: 500;
 }
 
 .profile-container {
@@ -45,12 +50,13 @@ a {
     top: 0;
     width: 100%;
     text-align: center;
-    background-color: var(--clr-4);
+    background-color: var(--clr-5);
     padding: 6vw 0vw;
     display: flex;
     flex-direction: column;
     box-shadow: 0vw 6vw 6vw rgba(0, 0, 0, 0.2);
     text-shadow: 0vw 2vw 1vw rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 .profile-container a, ion-icon {
@@ -60,7 +66,7 @@ a {
 }
 
 .profile-container a:hover {
-    color: var(--clr-5);
+    color: var(--clr-3);
     transition: var(--transition);
 }
 
@@ -96,4 +102,164 @@ a {
     color: var(--clr-5);
     transition: var(--transition);
     background-color: var(--clr-1);
+    animation: bounce 3s ease infinite;
+}
+
+.main {
+    margin: 60vw 12vw 8vw 12vw;
+    z-index: 1;
+}
+
+.main ion-icon {
+    color: var(--clr-5);
+    font-size: 1.7rem;
+}
+
+.page {
+    margin: 8vw 0vw 0vw 0vw;
+    background-color: var(--clr-1);
+    box-shadow: 0vw 3vw 6vw rgba(0, 0, 0, 0.2);
+    color: var(--clr-5);
+    text-align: center;
+    border-radius: 3vw;
+    font-family: var(--ff-sub);
+    font-weight: 700;
+    opacity: 0.85;
+    padding: 4vw 0vw 0vw 0vw;
+    transition: var(--transition);
+}
+
+.page:hover {
+    opacity: 1;
+    animation: bounce 3s ease infinite;
+    transition: var(--transition);
+}
+
+.page-img {
+    width: 66vw;
+    height: 66vw;
+    size-adjust: contain;
+}
+
+.langs {
+    padding: 0vw 6vw 4vw 6vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.langs ion-icon {
+    display: flex;
+    flex-direction: row;
+}
+
+.each-lang {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lang {
+    margin: 0vw 2.5vw;
+}
+
+.show {
+    background-color: var(--clr-3);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.show:hover {
+    background-color: var(--clr-1);
+    border: 1px solid var(--clr-5);
+    transition: var(--transition);
+}
+
+.show ion-icon {
+    font-size: 2rem;
+}
+
+.links {
+    background-color: var(--clr-5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0vw 0vw 3vw 3vw;
+    padding: 2vw;
+    display: none;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.links ion-icon {
+    font-size: 2.2rem;
+    color: var(--clr-1);
+}
+
+.links a {
+    color: var(--clr-1);
+    margin: 0vw 4vw;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    color: var(--clr-3);
+}
+
+.hide {
+    background-color: var(--clr-1);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    margin: 0vw 0vw 0vw 20vw;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.hide:hover {
+    transition: var(--transition);
+    background-color: var(--clr-3);
+    border: 1px solid var(--clr-1);
+}
+
+.hide ion-icon {
+    font-size: 2rem;
+    color: var(--clr-5);
+}
+
+/* Links toggle */
+.clear .links {
+    display: flex;
+}
+
+.clear .langs {
+    display: none;
+}
+
+
+
+/*Bounce animation*/
+@keyframes bounce {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.025)
+    }
+    100% {
+        transform: scale(1)
+    }
 }
