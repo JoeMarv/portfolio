@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Marcellus&family=Raleway:wght@500;600;700&display=swap');
+
+:root {
+    --clr-1: hsl(30, 52%, 87%);
+    --clr-2: hsl(39, 77%, 83%);
+    --clr-3: hsl(21, 16%, 33%);
+    --clr-4: hsl(25, 34%, 33%);
+    --clr-5: hsl(26, 100%, 7%);
+    --ff-head: 'Raleway', sans-serif;
+    --ff-sub: 'Marcellus', sans-serif;
+    --ff-body: 'Della Respira', sans-serif;
+    --transition: 0.3s ease
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--clr-2);
+    margin: 0vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+}
+
+h2 {
+    margin: 2vw 0vw;
+    color: var(--clr-1);
+    font-family: var(--ff-head);
+    font-weight: 700;
+    font-size: 2.8em;
+    text-shadow: 2vw 2vw 1vw rgba(0, 0, 0, 0.2);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--ff-sub);
+    font-weight: 400;
+}
+
+.profile-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--clr-4);
+    padding: 6vw 0vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0vw 6vw 6vw rgba(0, 0, 0, 0.2);
+    text-shadow: 0vw 2vw 1vw rgba(0, 0, 0, 0.2);
+}
+
+.profile-container a, ion-icon {
+    color: var(--clr-1);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.profile-container a:hover {
+    color: var(--clr-5);
+    transition: var(--transition);
+}
+
+.mail {
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2vw 0vw;
+}
+
+.mail a {
+    margin: 0.5vw 0vw 0vw 2vw;
+}
+
+.mail ion-icon {
+    font-size: 1.5rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socials ion-icon {
+    font-size: 2rem;
+    padding: 2vw;
+    border-radius: 50%;
+}
+
+.socials ion-icon:hover {
+    color: var(--clr-5);
+    transition: var(--transition);
+    background-color: var(--clr-1);
+}
