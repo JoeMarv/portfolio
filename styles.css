@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Marcellus&family=Raleway:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    --clr-1: hsl(30, 52%, 95%);
-    --clr-2: hsl(39, 77%, 90%);
-    --clr-3: hsl(21, 16%, 33%);
-    --clr-4: hsl(25, 34%, 23%);
-    --clr-5: hsl(26, 100%, 5%);
-    --ff-head: 'Raleway', sans-serif;
-    --ff-sub: 'Marcellus', sans-serif;
-    --ff-body: 'Della Respira', sans-serif;
+    --clr-1: #fafaff;
+    --clr-2: #eef0f2;
+    --clr-3: #ecebe4;
+    --clr-4: #daddd8;
+    --clr-5: #1c1c1c;
+    --ff-head: 'Outfit', sans-serif;
+    --ff-sub: 'Open Sans', sans-serif;
     --transition: 0.3s ease
 }
 
 * {
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 body {
-    background-color: var(--clr-2);
+    background-color: var(--clr-4);
     margin: 0vw;
     display: flex;
     flex-direction: column;
@@ -28,21 +28,21 @@ body {
 h2 {
     margin: 2vw 0vw;
     color: var(--clr-1);
-    font-family: var(--ff-head);
+    font-family: var(--ff-sub);
     font-weight: 700;
-    font-size: 2.6em;
+    font-size: 2.3em;
     text-shadow: 2vw 2vw 1vw rgba(0, 0, 0, 0.2);
 }
 
 h3 {
-    font-family: var(--ff-sub);
-    margin: 3vw 0vw;
+    font-family: var(--ff-head);
+    margin: 0vw;
 }
 
 a {
     text-decoration: none;
-    font-family: var(--ff-head);
-    font-weight: 500;
+    font-family: var(--ff-sub);
+    font-weight: 400;
 }
 
 .profile-container {
@@ -55,7 +55,6 @@ a {
     display: flex;
     flex-direction: column;
     box-shadow: 0vw 6vw 6vw rgba(0, 0, 0, 0.2);
-    text-shadow: 0vw 2vw 1vw rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
 
@@ -66,8 +65,9 @@ a {
 }
 
 .profile-container a:hover {
-    color: var(--clr-3);
+    color: var(--clr-4);
     transition: var(--transition);
+    opacity: 0.7;
 }
 
 .mail {
@@ -75,11 +75,11 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2vw 0vw;
+    margin: 3vw 0vw 2vw 0vw;
 }
 
 .mail a {
-    margin: 0.5vw 0vw 0vw 2vw;
+    margin: 0vw 0vw 0vw 2vw;
 }
 
 .mail ion-icon {
@@ -90,19 +90,22 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 2vw 0vw 0vw 0vw
 }
 
 .socials ion-icon {
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding: 2vw;
     border-radius: 50%;
+    border: 0.75vw solid var(--clr-1);
+    margin: 0vw 2vw;
 }
 
 .socials ion-icon:hover {
     color: var(--clr-5);
     transition: var(--transition);
     background-color: var(--clr-1);
-    animation: bounce 3s ease infinite;
+    animation: rotate 0.5s linear;
 }
 
 .main {
@@ -118,7 +121,7 @@ a {
 .page {
     margin: 8vw 0vw 0vw 0vw;
     background-color: var(--clr-1);
-    box-shadow: 0vw 3vw 6vw rgba(0, 0, 0, 0.2);
+    box-shadow: 0vw 6vw 6vw rgba(0, 0, 0, 0.2);
     color: var(--clr-5);
     text-align: center;
     border-radius: 3vw;
@@ -138,19 +141,25 @@ a {
 .page-img {
     width: 66vw;
     height: 66vw;
-    size-adjust: contain;
+    object-fit: cover;
+}
+
+.title {
+    padding: 4vw;
 }
 
 .langs {
-    padding: 0vw 6vw 4vw 6vw;
+    padding: 0vw 4vw 4vw 4vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .langs ion-icon {
     display: flex;
     flex-direction: row;
+    font-size: 1.4rem;
 }
 
 .each-lang {
@@ -160,28 +169,35 @@ a {
 }
 
 .lang {
-    margin: 0vw 2.5vw;
+    margin: 0vw 2vw 0vw 0vw;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: row;
 }
 
+
+
 .show {
-    background-color: var(--clr-3);
+    background-color: inherit;
     border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
-    padding: 2vw;
+    padding: 1.5vw;
     transition: var(--transition);
     cursor: pointer;
+    border: 0.5vw solid var(--clr-5);
+    color: white;
 }
 
 .show:hover {
-    background-color: var(--clr-1);
-    border: 1px solid var(--clr-5);
+    opacity: 0.925;
+    transform: scale(1.08);
     transition: var(--transition);
 }
 
 .show ion-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .links {
@@ -198,46 +214,77 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
 }
 
 .links ion-icon {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     color: var(--clr-1);
 }
 
 .links a {
-    color: var(--clr-1);
     margin: 0vw 4vw;
     display: flex;
     align-items: center;
     transition: var(--transition);
-}
-
-.links a:hover {
-    color: var(--clr-3);
-}
-
-.hide {
-    background-color: var(--clr-1);
-    border: none;
+    border: 0.75vw solid var(--clr-1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     padding: 2vw;
-    margin: 0vw 0vw 0vw 20vw;
+}
+
+.links a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: var(--transition);
+}
+
+.hide {
+    background-color: inherit;
+    border: 0.5vw solid var(--clr-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    margin: 0vw 0vw 0vw 16vw;
     transition: var(--transition);
     cursor: pointer;
 }
 
 .hide:hover {
     transition: var(--transition);
-    background-color: var(--clr-3);
-    border: 1px solid var(--clr-1);
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 .hide ion-icon {
-    font-size: 2rem;
-    color: var(--clr-5);
+    font-size: 1.5rem;
+    color: var(--clr-1);
+}
+
+.top-btn {   
+    position:  fixed;
+    width: 2rem;
+    height: 2rem;
+    bottom: 3rem;
+    right: 1.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    background: var(--clr-5);
+    color: var(--clr-1);
+    display: grid;
+    place-items: center;
+    animation: bounce 2s ease-in-out infinite;
+    box-sizing: 0vw 1vw 2vw rgba(0,0,0, 0.2);
+    visibility: hidden;
+    z-index: -100;
+    transition: var(--transition);
+}
+
+.top-btn ion-icon {
+    color: var(--clr-1);
+    font-size: 1.25rem;
 }
 
 /* Links toggle */
@@ -249,9 +296,23 @@ a {
     display: none;
 }
 
+.show {
+    visibility: visible;
+    z-index: 100;
+}
+
 
 
 /*Bounce animation*/
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }    
+    to {
+        transform: rotate(359deg);
+    }
+}
+
 @keyframes bounce {
     0% {
         transform: scale(1)
