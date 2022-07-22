@@ -1,17 +1,30 @@
-const showBtn = document.querySelector('.show')
-const hideBtn = document.querySelector('.hide')
+const pages = document.querySelectorAll('.page')
 const topBtn = document.querySelector ('.top-btn')
 
-showBtn.addEventListener('click', function() {
-    const main = showBtn.parentElement.parentElement
 
-    main.classList.toggle('clear')
-})
+pages.forEach(function(page) {
+    const showBtn = page.querySelector('.show')
+    const hideBtn = page.querySelector('.hide')
 
-hideBtn.addEventListener('click', function() {
-    const main = showBtn.parentElement.parentElement
+    showBtn.addEventListener('click', function() {
+        pages.forEach(function(item) {
+            if (item !== page) {
+                item.classList.remove('clear')
+            }
+        })
 
-    main.classList.remove('clear')
+        page.classList.toggle('clear')
+    })
+
+    hideBtn.addEventListener('click', function() {
+        pages.forEach(function(item) {
+            if (item !== page) {
+                item.classList.remove('clear')
+            }
+        })
+
+        page.classList.remove('clear')
+    })
 })
 
 
@@ -19,10 +32,10 @@ window.addEventListener('scroll', function() {
     const scrollHeight = window.pageYOffset
 
     if (scrollHeight > 400) {
-        topBtn.classList.add('show')
+        topBtn.classList.add('show-btn')
     } 
     else {
-        topBtn.classList.remove('show')
+        topBtn.classList.remove('show-btn')
     }
 })
 

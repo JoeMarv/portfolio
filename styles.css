@@ -97,7 +97,7 @@ a {
     font-size: 1.4rem;
     padding: 2vw;
     border-radius: 50%;
-    border: 0.75vw solid var(--clr-1);
+    border: 1px solid var(--clr-1);
     margin: 0vw 2vw;
 }
 
@@ -142,6 +142,7 @@ a {
     width: 66vw;
     height: 66vw;
     object-fit: cover;
+    border-radius: 2vw;
 }
 
 .title {
@@ -175,8 +176,6 @@ a {
     flex-direction: row;
 }
 
-
-
 .show {
     background-color: inherit;
     border: none;
@@ -186,7 +185,7 @@ a {
     padding: 1.5vw;
     transition: var(--transition);
     cursor: pointer;
-    border: 0.5vw solid var(--clr-5);
+    border: 1px solid var(--clr-5);
     color: white;
 }
 
@@ -194,6 +193,7 @@ a {
     opacity: 0.925;
     transform: scale(1.08);
     transition: var(--transition);
+    animation: rotate 0.5s linear;
 }
 
 .show ion-icon {
@@ -227,7 +227,7 @@ a {
     display: flex;
     align-items: center;
     transition: var(--transition);
-    border: 0.75vw solid var(--clr-1);
+    border: 1px solid var(--clr-1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -238,11 +238,12 @@ a {
     opacity: 0.8;
     transform: scale(1.05);
     transition: var(--transition);
+    animation: rotate 0.5s linear;
 }
 
 .hide {
     background-color: inherit;
-    border: 0.5vw solid var(--clr-1);
+    border: 1px solid var(--clr-1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -250,6 +251,7 @@ a {
     margin: 0vw 0vw 0vw 16vw;
     transition: var(--transition);
     cursor: pointer;
+    animation: rotate 0.5s linear;
 }
 
 .hide:hover {
@@ -296,7 +298,7 @@ a {
     display: none;
 }
 
-.show {
+.show-btn {
     visibility: visible;
     z-index: 100;
 }
