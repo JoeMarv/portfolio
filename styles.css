@@ -16,6 +16,10 @@
     outline: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--clr-4);
     margin: 0vw;
@@ -51,7 +55,7 @@ a {
     width: 100%;
     text-align: center;
     background-color: var(--clr-5);
-    padding: 6vw 0vw;
+    padding: 4vw 0vw;
     display: flex;
     flex-direction: column;
     box-shadow: 0vw 6vw 6vw rgba(0, 0, 0, 0.2);
@@ -65,9 +69,8 @@ a {
 }
 
 .profile-container a:hover {
-    color: var(--clr-4);
+    color: var(--clr-1);
     transition: var(--transition);
-    opacity: 0.7;
 }
 
 .mail {
@@ -326,3 +329,179 @@ a {
         transform: scale(1)
     }
 }
+
+
+/* For screens 768px to 1199px */
+@media only screen and (min-width: 768px) {
+    h2 {
+        margin: 2vw 3vw;
+        font-size: 1.6em;
+        text-shadow: 2vw 2vw 1vw rgba(0, 0, 0, 0.2);
+    }
+    
+    h3 {
+        margin: 0vw;
+        font-size: 0.85em;
+    }
+    
+    .profile-container {
+        width: 96vw;
+        position: fixed;
+        text-align: left;
+        padding: 2vw;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0vw 3vw 3vw rgba(0, 0, 0, 0.2);
+    }
+    
+    .mail {
+        font-size: 1em;
+        margin: 3vw 2vw;
+    }
+    
+    .mail a {
+        margin: 0vw 0vw 0vw 1vw;
+    }
+    
+    .mail ion-icon {
+        font-size: 1.3rem;
+    }
+    
+    .socials {
+        margin: 2vw 0vw 0vw 0vw
+    }
+    
+    .socials ion-icon {
+        font-size: 1rem;
+        padding: 1vw;
+        border-radius: 50%;
+        margin: 0vw 1vw;
+    }
+    
+    .main {
+        margin: 16vw 5vw 4vw 5vw;
+        z-index: 1;
+        display: grid;
+        justify-items: center;
+        gap: 4vw 3vw;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0vw;
+        box-shadow: 0vw 3vw 3vw rgba(0, 0, 0, 0.2);
+        border-radius: 1.5vw;
+        padding: 1.5vw 0vw 0vw 0vw;
+        width: 28vw;
+        height: auto;
+    }
+    
+    .page-img {
+        margin: 0vw 1.5vw;
+        width: 25vw;
+        height: 25vw;
+        object-fit: cover;
+        border-radius: 1vw;
+    }
+    
+    .title {
+        padding: 1.5vw;
+    }
+    
+    .langs {
+        padding: 0vw 1.5vw 1.5vw 1.5vw;
+    }
+    
+    .langs ion-icon {
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+    }
+    
+    .lang {
+        margin: 0vw 1vw 0vw 0vw;
+        font-size: 0.75em;
+    }
+    
+    .show {
+        padding: 0.5vw;
+    }
+    
+    .show ion-icon {
+        font-size: 1rem;
+    }
+    
+    .links {
+        position: absolute;
+        border-radius: 1.5vw;
+        padding: 1vw;
+        margin: -13vw 0vw 0vw 18vw;
+        opacity: 0.9;
+        /* display: none; */
+    }
+
+    
+    .links ion-icon {
+        font-size: 1rem;
+    }
+    
+    .links a {
+        margin: 0vw 1vw;
+        padding: 1vw;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .top-btn {   
+        position:  fixed;
+        width: 2rem;
+        height: 2rem;
+        bottom: 3rem;
+        right: 1.5rem;
+        border: none;
+        border-radius: 0.6rem;
+        background: var(--clr-5);
+        color: var(--clr-1);
+        display: grid;
+        place-items: center;
+        animation: bounce 2s ease-in-out infinite;
+        box-sizing: 0vw 1vw 2vw rgba(0,0,0, 0.2);
+        visibility: hidden;
+        z-index: -100;
+        transition: var(--transition);
+    }
+    
+    .top-btn ion-icon {
+        color: var(--clr-1);
+        font-size: 1.25rem;
+    }
+
+    /* Links toggle */
+    .clear .links {
+        display: flex;
+    }
+
+    .clear .langs {
+        display: flex;
+    }
+
+    .show-btn {
+        visibility: visible;
+        z-index: 100;
+    }
+}
+
+
+
+/* For screens 1200px to 1439px */
+
+/* For screens 1440px to 1919px */
+
+/* For larger than 1920px */
+

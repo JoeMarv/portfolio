@@ -31,7 +31,7 @@ pages.forEach(function(page) {
 window.addEventListener('scroll', function() {
     const scrollHeight = window.pageYOffset
 
-    if (scrollHeight > 400) {
+    if (scrollHeight > 300) {
         topBtn.classList.add('show-btn')
     } 
     else {
