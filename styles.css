@@ -199,6 +199,10 @@ a {
     animation: rotate 0.5s linear;
 }
 
+.show:focus {
+    transform: scale(0.99);
+}
+
 .show ion-icon {
     font-size: 1.5rem;
 }
@@ -281,7 +285,7 @@ a {
     display: grid;
     place-items: center;
     animation: bounce 2s ease-in-out infinite;
-    box-sizing: 0vw 1vw 2vw rgba(0,0,0, 0.2);
+    box-shadow: 0vw 1vw 2vw rgba(0,0,0, 0.2);
     visibility: hidden;
     z-index: -100;
     transition: var(--transition);
@@ -414,12 +418,13 @@ a {
     
     .langs {
         padding: 0vw 1.5vw 1.5vw 1.5vw;
+        text-align: center;
     }
     
     .langs ion-icon {
         display: flex;
         flex-direction: row;
-        font-size: 1rem;
+        font-size: 1rem
     }
     
     .lang {
@@ -438,24 +443,33 @@ a {
     .links {
         position: absolute;
         border-radius: 1.5vw;
-        padding: 1vw;
-        margin: -13vw 0vw 0vw 18vw;
+        padding: 1vw 0.5vw;
+        margin: -11.5vw 0vw 0vw 20.5vw;
         opacity: 0.9;
-        /* display: none; */
+        display: none;
     }
 
-    
     .links ion-icon {
         font-size: 1rem;
     }
     
     .links a {
-        margin: 0vw 1vw;
-        padding: 1vw;
+        margin: 0vw 0.5vw;
+        padding: 0.5vw;
     }
     
     .hide {
         display: none;
+    }
+
+    .triangle {
+        width: 0; 
+        height: 0; 
+        border-left: 1.5vw solid transparent;
+        border-right: 1.5vw solid transparent;
+        border-top: 1.5vw solid var(--clr-5);
+        position: absolute;
+        margin: 4vw 0vw 0vw 0vw;
     }
     
     .top-btn {   
@@ -464,36 +478,13 @@ a {
         height: 2rem;
         bottom: 3rem;
         right: 1.5rem;
-        border: none;
         border-radius: 0.6rem;
-        background: var(--clr-5);
-        color: var(--clr-1);
-        display: grid;
-        place-items: center;
-        animation: bounce 2s ease-in-out infinite;
-        box-sizing: 0vw 1vw 2vw rgba(0,0,0, 0.2);
-        visibility: hidden;
-        z-index: -100;
-        transition: var(--transition);
+        box-shadow: 0vw 1vw 2vw rgba(0,0,0, 0.2);
     }
     
     .top-btn ion-icon {
         color: var(--clr-1);
         font-size: 1.25rem;
-    }
-
-    /* Links toggle */
-    .clear .links {
-        display: flex;
-    }
-
-    .clear .langs {
-        display: flex;
-    }
-
-    .show-btn {
-        visibility: visible;
-        z-index: 100;
     }
 }
 
