@@ -146,6 +146,7 @@ a {
     height: 66vw;
     object-fit: cover;
     border-radius: 2vw;
+    filter: brightness(0.9);
 }
 
 .title {
@@ -469,7 +470,7 @@ a {
         border-right: 1.5vw solid transparent;
         border-top: 1.5vw solid var(--clr-5);
         position: absolute;
-        margin: 4vw 0vw 0vw 0vw;
+        margin: 3.75vw 0vw 0vw 0vw;
     }
     
     .top-btn {   
@@ -486,13 +487,381 @@ a {
         color: var(--clr-1);
         font-size: 1.25rem;
     }
+
+    /* Links toggle */
+    .clear .links {
+        display: flex;
+    }
+
+    .clear .langs {
+        display: flex;
+    }
+
+    .show-btn {
+        visibility: visible;
+        z-index: 100;
+    }
 }
 
 
-
 /* For screens 1200px to 1439px */
+@media only screen and (min-width: 1200px) {
+    h2 {
+        margin: 2vw 3vw;
+        font-size: 2em;
+        text-shadow: 2vw 2vw 1vw rgba(0, 0, 0, 0.2);
+    }
+    
+    h3 {
+        margin: 0vw;
+        font-size: 1.35em;
+    }
+    
+    .profile-container {
+        width: 96vw;
+    }
+    
+    .mail {
+        font-size: 1.5em;
+        margin: 2vw;
+    }
+    
+    .mail a {
+        margin: 0vw 0vw 0vw 1vw;
+    }
+    
+    .mail ion-icon {
+        font-size: 2rem;
+    }
+    
+    .socials {
+        margin: 1.5vw 0vw 0vw 0vw
+    }
+    
+    .socials ion-icon {
+        font-size: 1.4rem;
+    }
+    
+    .main {
+        margin: 16vw 5vw 4vw 5vw;
+    }
+    
+    .title {
+        padding: 1.5vw;
+    }
+    
+    .langs {
+        padding: 0vw 1.5vw 1.5vw 1.5vw;
+        text-align: center;
+    }
+    
+    .langs ion-icon {
+        font-size: 1.6rem
+    }
+    
+    .lang {
+        margin: 0vw 1vw 0vw 0vw;
+        font-size: 1.15em;
+    }
+    
+    .show {
+        padding: 0.5vw;
+    }
+    
+    .show ion-icon {
+        font-size: 1.6rem;
+    }
+    
+    .links {
+        position: absolute;
+        border-radius: 1.5vw;
+        padding: 1vw 0.5vw;
+        margin: -11.5vw 0vw 0vw 20vw;
+        opacity: 0.9;
+        display: none;
+    }
+
+    .links ion-icon {
+        font-size: 1.6rem;
+    }
+    
+    .links a {
+        margin: 0vw 0.6vw;
+        padding: 0.5vw;
+    }
+
+    .triangle {
+        margin: 3.75vw 0vw 0vw 0vw;
+    }
+    
+    .top-btn {   
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        bottom: 3rem;
+        right: 1.5rem;
+        border-radius: 1.2rem;
+        box-shadow: 0vw 2vw 4vw rgba(0,0,0, 0.2);
+    }
+    
+    .top-btn ion-icon {
+        color: var(--clr-1);
+        font-size: 2.5rem;
+    }
+
+    /* Links toggle */
+    .clear .links {
+        display: flex;
+    }
+
+    .clear .langs {
+        display: flex;
+    }
+
+    .show-btn {
+        visibility: visible;
+        z-index: 100;
+    }
+}
+
 
 /* For screens 1440px to 1919px */
+@media only screen and (min-width: 1200px) {
+    h2 {
+        margin: 2vw 3vw;
+        font-size: 2.5em;
+        text-shadow: 2vw 2vw 1vw rgba(0, 0, 0, 0.2);
+    }
+    
+    h3 {
+        margin: 0vw;
+        font-size: 1.6em;
+    }
+    
+    .profile-container {
+        width: 96vw;
+        padding: 1vw 2vw;
+    }
+    
+    .mail {
+        font-size: 1.6em;
+        margin: 2.5vw 2vw 2vw 2vw;
+    }
+    
+    .mail a {
+        margin: 0vw 0vw 0vw 1vw;
+    }
+    
+    .mail ion-icon {
+        font-size: 2.3rem;
+    }
+    
+    .socials {
+        margin: 1.5vw 0vw 0vw 0vw
+    }
+    
+    .socials ion-icon {
+        font-size: 1.7rem;
+    }
+    
+    .main {
+        margin: 14vw 5vw 4vw 5vw;
+    }
+    
+    .title {
+        padding: 1.5vw;
+    }
+    
+    .langs {
+        padding: 0vw 1.5vw 1.5vw 1.5vw;
+        text-align: center;
+    }
+    
+    .langs ion-icon {
+        font-size: 1.8rem
+    }
+    
+    .lang {
+        margin: 0vw 1vw 0vw 0vw;
+        font-size: 1.4em;
+    }
+    
+    .show {
+        padding: 0.5vw;
+    }
+    
+    .show ion-icon {
+        font-size: 1.8rem;
+    }
+    
+    .links {
+        position: absolute;
+        border-radius: 1.5vw;
+        padding: 1vw 0.5vw;
+        margin: -11.5vw 0vw 0vw 20.2vw;
+        opacity: 0.9;
+        display: none;
+    }
+
+    .links ion-icon {
+        font-size: 1.6rem;
+    }
+    
+    .links a {
+        margin: 0vw 0.6vw;
+        padding: 0.5vw;
+    }
+
+    .triangle {
+        margin: 3.75vw 0vw 0vw 0vw;
+    }
+    
+    .top-btn {   
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        bottom: 3rem;
+        right: 1.5rem;
+        border-radius: 1.2rem;
+        box-shadow: 0vw 2vw 4vw rgba(0,0,0, 0.2);
+    }
+    
+    .top-btn ion-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Links toggle */
+    .clear .links {
+        display: flex;
+    }
+
+    .clear .langs {
+        display: flex;
+    }
+
+    .show-btn {
+        visibility: visible;
+        z-index: 100;
+    }
+}
+
 
 /* For larger than 1920px */
+@media only screen and (min-width: 1200px) {
+    h2 {
+        margin: 2vw 3vw;
+        font-size: 4em;
+        text-shadow: 2vw 2vw 1vw rgba(0, 0, 0, 0.2);
+    }
+    
+    h3 {
+        margin: 0vw;
+        font-size: 2.1em;
+    }
+    
+    .profile-container {
+        width: 96vw;
+        padding: 2vw;
+    }
+    
+    .mail {
+        font-size: 2.4em;
+        margin: 3vw 2vw 2vw 2vw;
+    }
+    
+    .mail a {
+        margin: 0vw 0vw 0vw 1vw;
+    }
+    
+    .mail ion-icon {
+        font-size: 3.5rem;
+    }
+    
+    .socials {
+        margin: 2.5vw 0vw 0vw 0vw
+    }
+    
+    .socials ion-icon {
+        font-size: 2rem;
+    }
+    
+    .main {
+        margin: 16vw 5vw 4vw 5vw;
+    }
+    
+    .title {
+        padding: 1.5vw;
+    }
+    
+    .langs {
+        padding: 0vw 1.5vw 1.5vw 1.5vw;
+        text-align: center;
+    }
+    
+    .langs ion-icon {
+        font-size: 2.5rem
+    }
+    
+    .lang {
+        margin: 0vw 1vw 0vw 0vw;
+        font-size: 1.8em;
+    }
+    
+    .show {
+        padding: 0.5vw;
+    }
+    
+    .show ion-icon {
+        font-size: 2.5rem;
+    }
+    
+    .links {
+        position: absolute;
+        border-radius: 1.5vw;
+        padding: 1vw 0.5vw;
+        margin: -11.5vw 0vw 0vw 20vw;
+        opacity: 0.9;
+        display: none;
+    }
 
+    .links ion-icon {
+        font-size: 2.5rem;
+    }
+    
+    .links a {
+        margin: 0vw 0.6vw;
+        padding: 0.5vw;
+    }
+
+    .triangle {
+        margin: 3.75vw 0vw 0vw 0vw;
+    }
+    
+    .top-btn {   
+        position: fixed;
+        width: 6rem;
+        height: 6rem;
+        bottom: 6rem;
+        right: 3rem;
+        border-radius: 2rem;
+        box-shadow: 0vw 4vw 8vw rgba(0,0,0, 0.2);
+    }
+    
+    .top-btn ion-icon {
+        font-size: 4rem;
+    }
+
+    /* Links toggle */
+    .clear .links {
+        display: flex;
+    }
+
+    .clear .langs {
+        display: flex;
+    }
+
+    .show-btn {
+        visibility: visible;
+        z-index: 100;
+    }
+}
