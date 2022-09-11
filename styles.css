@@ -108,7 +108,7 @@ a {
     color: var(--clr-5);
     transition: var(--transition);
     background-color: var(--clr-1);
-    animation: rotate 0.5s linear;
+    transform: rotate(-180deg);
 }
 
 .main {
@@ -197,7 +197,7 @@ a {
     opacity: 0.925;
     transform: scale(1.08);
     transition: var(--transition);
-    animation: rotate 0.5s linear;
+    transform: rotate(-180deg);
 }
 
 .show:focus {
@@ -246,7 +246,7 @@ a {
     opacity: 0.8;
     transform: scale(1.05);
     transition: var(--transition);
-    animation: rotate 0.5s linear;
+    transform: rotate(-180deg);
 }
 
 .hide {
@@ -259,7 +259,7 @@ a {
     margin: 0vw 0vw 0vw 16vw;
     transition: var(--transition);
     cursor: pointer;
-    animation: rotate 0.5s linear;
+    transform: rotate(-180deg);
 }
 
 .hide:hover {
@@ -313,16 +313,7 @@ a {
 
 
 
-/*Bounce animation*/
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }    
-    to {
-        transform: rotate(359deg);
-    }
-}
-
+/*Animation*/
 @keyframes bounce {
     0% {
         transform: scale(1)
